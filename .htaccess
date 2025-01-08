@@ -1,0 +1,12 @@
+RewriteEngine On
+
+RewriteRule ^order_products$ order_products.php [L]
+RewriteRule ^cart$ cart.php [L]
+RewriteRule ^wishlist$ wishlist.php [L]
+RewriteRule ^account$ account.php [L]
+RewriteRule ^productPage/([0-9]+)$ productPage.php?id=$1 [L]
+
+# Ensure .php files are inaccessible directly
+#RewriteCond %{THE_REQUEST} \s/([^.]+)\.php [NC]
+
+#RewriteRule ^ /%1 [R=301,L]
